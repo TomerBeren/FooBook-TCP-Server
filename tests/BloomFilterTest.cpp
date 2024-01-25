@@ -19,3 +19,22 @@ TEST(BloomFilterTest, Initialization)
     EXPECT_EQ(hash[0], "1");
     EXPECT_EQ(hash[1], "2");
 }
+// Tests setting a bit in the BloomFilter
+TEST(BloomFilterTest, SetBitArray)
+{
+    bf.initialize(10, {"1", "2", "3"});
+    bf.setBitArray(3);
+    const std::vector<bool> &bits = bf.getBits();
+    // Verify bit 3 is set; others are not
+    for (int i = 0; i < bits.size(); ++i)
+    {
+        if (i == 3)
+        {
+            EXPECT_TRUE(bits[i]);
+        }
+        else
+        {
+            EXPECT_FALSE(bits[i]);
+        }
+    }
+}
