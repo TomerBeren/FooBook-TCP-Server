@@ -19,6 +19,7 @@ TEST(BloomFilterTest, Initialization)
     EXPECT_EQ(hash[0], "1");
     EXPECT_EQ(hash[1], "2");
 }
+
 // Tests setting a bit in the BloomFilter
 TEST(BloomFilterTest, SetBitArray)
 {
@@ -37,4 +38,23 @@ TEST(BloomFilterTest, SetBitArray)
             EXPECT_FALSE(bits[i]);
         }
     }
+}
+
+// Tests BloomFilter's reported bit array size
+TEST(BloomFilterTest, GetBitArraySize)
+{
+    bf.initialize(10, {"1", "2", "3"});
+    EXPECT_EQ(bf.getBitArraySize(), 10); // Verify size is 10
+}
+
+// Tests handling of false positives
+TEST(BloomFilterTest, FalsePositives)
+{
+    bf.initialize(10, {"1", "2", "3"});
+    std::string testUrl = "http://example.com";
+    bf.insertFaslePositives(testUrl); // Insert test URL as control.
+    std::unordered_set<std::string> falsePositives = bf.getFalsePositives();
+    // Verify test URL is recorded.
+    EXPECT_EQ(falsePositives.size(), 1);
+    EXPECT_TRUE(falsePositives.find(testUrl) != falsePositives.end());
 }
