@@ -14,7 +14,7 @@ set(SOURCE_FILES
 src/calc.cpp # this is where the code we want to test
 )
 set(TEST_FILES
-tests/calc_test.cpp
+tests/BloomFilterTest.cpp
 tests/test_main.cpp # this is the main for tests tests/calc_test.cpp # this file contain the tests
   )
   add_executable(CalcTests ${TEST_FILES})
