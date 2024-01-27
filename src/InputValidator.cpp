@@ -33,3 +33,25 @@ bool InputValidator::isValidBloomFilterCommand(const std::vector<std::string> &t
     }
     return true;
 }
+
+// Removes duplicate tokens from the input string and returns a vector of unique tokens.
+std::vector<std::string> InputValidator::removeDuplicatesAndInitVector(const std::string &input)
+{
+    std::vector<std::string> tokens; // To store the unique tokens.
+    std::unordered_set<std::string> seenTokens; // To track tokens we've seen.
+    std::istringstream ss(input); // Stream to parse the input string.
+    std::string token;
+
+    while (ss >> token) // Extract tokens one by one.
+    {
+        if (seenTokens.find(token) == seenTokens.end()) // If the token hasn't been seen before.
+        {
+            // Add it to the list of tokens.
+            tokens.push_back(token);
+            // Mark it as seen.
+            seenTokens.insert(token);
+        }
+    }
+
+    return tokens;
+}
