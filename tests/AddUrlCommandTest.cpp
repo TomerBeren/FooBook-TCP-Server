@@ -1,7 +1,5 @@
-#include <gtest/gtest.h>
-#include "AddUrlCommand.hpp" 
+#include <gtest/gtest.h> 
 #include "BloomFilter.hpp"
-#include "IMenu.hpp"
 
 TEST(AddUrlCommandTest, ExecuteHashIds)
 {
@@ -23,4 +21,21 @@ TEST(AddUrlCommandTest, ExecuteHashIds)
     //check if the BloomFilter bitArray is updated correctly
     EXPECT_TRUE(bitArray[index1]);
     EXPECT_TRUE(bitArray[index2]);
+}
+// Test case for the getId() function
+TEST(AddUrlCommandTest, GetId)
+{
+    // Create an instance of AddUrlCommand
+    AddUrlCommand addUrlCommand;
+
+    // Call the getId() function and check if it returns the correct ID
+    EXPECT_EQ(addUrlCommand.getId(), "1");
+}
+
+// Test case for the registered static member
+TEST(AddUrlCommandTest, Registered)
+{
+    // The registered static member should already be initialized.
+    // Check if it returns true, indicating successful registration.
+    EXPECT_TRUE(AddUrlCommand::registered);
 }
