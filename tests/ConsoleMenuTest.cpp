@@ -1,8 +1,9 @@
 #include <gtest/gtest.h>
+#include "ConsoleMenu.hpp"
+#include "InputValidator.hpp"
+#include "IMenu.hpp"
 #include <iostream>
 #include <typeinfo>
-#include "ConsoleMenu.hpp"
-
 // Tests for the ConsoleMenu Class
 TEST(MenuTest, Input)
 {
