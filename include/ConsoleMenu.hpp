@@ -1,13 +1,14 @@
 #ifndef CONSOLEMENU_H
 #define CONSOLEMENU_H
 
+#include "IMenu.hpp"
 #include "BloomFilter.hpp"
 #include <vector>
 #include <sstream>
 #include <iostream>
 
 // ConsoleMenu class definition, inheriting from IMenu for menu functionalities.
-class ConsoleMenu 
+class ConsoleMenu :  public IMenu
 {
 public:
     ConsoleMenu() = default; // Default constructor.

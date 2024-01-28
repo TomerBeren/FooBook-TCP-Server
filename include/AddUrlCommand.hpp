@@ -1,8 +1,9 @@
 // AddUrlCommand.hpp
 #pragma once
+#include "ICommand.hpp"
+#include "AbstractCommand.hpp"
 #include <iostream>
-
-class AddUrlCommand 
+class AddUrlCommand : public AbstractCommand
 {
 public:
     // Override the execute method from AbstractCommand to define specific behavior for adding a URL to a BloomFilter.
