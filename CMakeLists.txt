@@ -14,6 +14,7 @@ project("AdvancedProgProject") # Replace “MyCalc” with your repo name
   enable_testing()
   
   set(SOURCE_FILES
+    src/BlackListChecker.cpp
     src/AddUrlCommand.cpp
     src/BloomFilter.cpp
     src/CommandFactory.cpp
@@ -22,6 +23,7 @@ project("AdvancedProgProject") # Replace “MyCalc” with your repo name
      # this is where the code we want to test
   )
   set(TEST_FILES
+    tests/BlackListCheckerTests.cpp
     tests/AddUrlCommandTest.cpp
     tests/BloomFilterTest.cpp
     tests/CommandFactoryTest.cpp
