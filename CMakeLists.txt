@@ -14,6 +14,7 @@ project("AdvancedProgProject") # Replace “MyCalc” with your repo name
   enable_testing()
   
   set(SOURCE_FILES
+    src/AddUrlCommand.cpp
     src/BloomFilter.cpp
     src/CommandFactory.cpp
     src/ConsoleMenu.cpp
