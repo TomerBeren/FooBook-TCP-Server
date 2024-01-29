@@ -15,11 +15,17 @@ project("AdvancedProgProject") # Replace “MyCalc” with your repo name
   
   set(SOURCE_FILES
     src/BloomFilter.cpp
+    src/CommandFactory.cpp
+    src/ConsoleMenu.cpp
+    src/InputValidator.cpp
      # this is where the code we want to test
   )
   set(TEST_FILES
-    tests/ConsoleMenuTest.cpp
+    tests/AddUrlCommandTest.cpp
     tests/BloomFilterTest.cpp
+    tests/CommandFactoryTest.cpp
+    tests/ConsoleMenuTest.cpp
+    tests/InputValidatorTest.cpp
     tests/test_main.cpp # this is the main for tests tests/calc_test.cpp # this file contain the tests
   )
   add_executable(AdvancedTests ${TEST_FILES})
