@@ -14,6 +14,8 @@ project("AdvancedProgProject") # Replace “MyCalc” with your repo name
   enable_testing()
   
   set(SOURCE_FILES
+    
+    src/FalsePositiveChecker.cpp
     src/BlackListChecker.cpp
     src/AddUrlCommand.cpp
     src/BloomFilter.cpp
