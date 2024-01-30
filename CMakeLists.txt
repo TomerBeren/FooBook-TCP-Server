@@ -23,6 +23,7 @@ project("AdvancedProgProject") # Replace “MyCalc” with your repo name
      # this is where the code we want to test
   )
   set(TEST_FILES
+    tests/FalsePositiveCheckerTest.cpp
     tests/BlackListCheckerTests.cpp
     tests/AddUrlCommandTest.cpp
     tests/BloomFilterTest.cpp
