@@ -1,5 +1,7 @@
-#include <gtest/gtest.h> 
+#include <gtest/gtest.h>
+#include "AddUrlCommand.hpp" 
 #include "BloomFilter.hpp"
+#include "IMenu.hpp"
 
 TEST(AddUrlCommandTest, ExecuteHashIds)
 {
