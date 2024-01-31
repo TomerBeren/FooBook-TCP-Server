@@ -1,9 +1,9 @@
 #include "CommandInitializer.hpp"
 #include "CommandFactory.hpp"
+#include "BlackListChecker.hpp"
 #include "AddUrlCommand.hpp" 
 #include <gtest/gtest.h>
 #include "IMenu.hpp"
-#include "App.hpp"
 #include "ConsoleMenu.hpp"
 
 class CommandInitializerTest : public ::testing::Test
@@ -34,4 +34,14 @@ TEST_F(CommandInitializerTest, CommandsMapContentTest)
     // Check if the command is of the correct type
     auto *cmd = commands["1"];
     ASSERT_TRUE(dynamic_cast<AddUrlCommand *>(cmd) != nullptr);
+}
+
+TEST_F(CommandInitializerTest, CommandsMapContentTest)
+{
+    auto &commands = initializer.getInitializedCommands();
+    // Check if the "1" command is present in the commands map
+    ASSERT_NE(commands.find("2"), commands.end());
+    // Check if the command is of the correct type
+    auto *cmd = commands["2"];
+    ASSERT_TRUE(dynamic_cast<BlackListChecker *>(cmd) != nullptr);
 }
