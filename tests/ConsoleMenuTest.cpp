@@ -4,6 +4,7 @@
 #include "IMenu.hpp"
 #include <iostream>
 #include <typeinfo>
+
 // Tests for the ConsoleMenu Class
 TEST(MenuTest, Input)
 {

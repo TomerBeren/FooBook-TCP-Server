@@ -1,4 +1,5 @@
 #include <gtest/gtest.h>
+#include "BlackListChecker.hpp"
 #include "BloomFilter.hpp"
 #include "AddUrlCommand.hpp"
 
