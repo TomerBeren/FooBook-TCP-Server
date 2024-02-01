@@ -14,6 +14,7 @@ project("AdvancedProgProject") # Replace “MyCalc” with your repo name
   enable_testing()
   
   set(SOURCE_FILES
+    src/App.cpp
     src/CommandInitializer.cpp
     src/FalsePositiveChecker.cpp
     src/BlackListChecker.cpp
@@ -25,6 +26,7 @@ project("AdvancedProgProject") # Replace “MyCalc” with your repo name
      # this is where the code we want to test
   )
   set(TEST_FILES
+    tests/AppTest.cpp
     tests/CommandInitTest.cpp
     tests/FalsePositiveCheckerTest.cpp
     tests/BlackListCheckerTests.cpp
