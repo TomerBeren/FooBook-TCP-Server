@@ -1,5 +1,5 @@
 #include "FalsePositiveChecker.hpp"
-#include "BloomFilter.hpp" // Include your BloomFilter class header
+#include "BloomFilter.hpp" 
 #include <gtest/gtest.h>
 #include <sstream>
 #include <iostream>
