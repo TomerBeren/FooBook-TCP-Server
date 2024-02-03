@@ -1,6 +1,8 @@
 // AddUrlCommand.hpp
 #pragma once
+
 #include "ICommand.hpp"
+#include "CommandFactory.hpp"
 #include "AbstractCommand.hpp"
 #include <iostream>
 class AddUrlCommand : public AbstractCommand

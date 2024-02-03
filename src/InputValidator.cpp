@@ -1,5 +1,4 @@
 #include "InputValidator.hpp"
-#include <sstream>
 
 // Checks if a given string can be converted to an integer.
 bool InputValidator::isInteger(const std::string &str)

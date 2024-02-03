@@ -1,8 +1,9 @@
 #ifndef ICOMMAND_H
 #define ICOMMAND_H
+
 #include <iostream>
 #include "BloomFilter.hpp"
-
+#include "FalsePositiveChecker.hpp"
 
 // ICommand interface declaration.
 class ICommand

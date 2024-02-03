@@ -3,6 +3,7 @@
 
 #include <string>
 #include <unordered_set>
+#include <iostream>
 #include "BloomFilter.hpp"
 
 // FalsePositiveChecker class definition

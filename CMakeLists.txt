@@ -37,10 +37,10 @@ project("AdvancedProgProject") # Replace “MyCalc” with your repo name
     tests/InputValidatorTest.cpp
     tests/test_main.cpp # this is the main for tests tests/calc_test.cpp # this file contain the tests
   )
-  add_executable(AdvancedTests ${TEST_FILES})
-# Link Google Test to the test executable
-  target_link_libraries(AdvancedTests PRIVATE gtest gtest_main)
-  # Include the source directory for tests
+  include_directories(${CMAKE_SOURCE_DIR}/include)
+  add_executable(AdvancedTests ${TEST_FILES} ${SOURCE_FILES})
+  target_link_libraries(AdvancedTests gtest gtest_main)
   target_include_directories(AdvancedTests PRIVATE src)
+
   include(GoogleTest)
   add_test(NAME AdvancedTests COMMAND AdvancedTests)
