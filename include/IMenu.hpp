@@ -1,7 +1,9 @@
 #ifndef IMENU_H
 #define IMENU_H
+
 #include <iostream>
 #include <vector>
+#include <sstream>
 #include "BloomFilter.hpp"
 #include "InputValidator.hpp"
 

@@ -1,5 +1,5 @@
 #include "BlackListChecker.hpp"
-#include <iostream>
+
 // Executes the blacklist check command
 void BlackListChecker::execute(std::string &url, BloomFilter &bloomFilter) 
 {

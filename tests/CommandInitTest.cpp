@@ -26,7 +26,7 @@ TEST_F(CommandInitializerTest, InitializationTest)
     ASSERT_FALSE(commands.empty());
 }
 
-TEST_F(CommandInitializerTest, CommandsMapContentTest)
+TEST_F(CommandInitializerTest, CommandsMapContentTest1)
 {
     auto &commands = initializer.getInitializedCommands();
     // Check if the "1" command is present in the commands map
@@ -36,7 +36,7 @@ TEST_F(CommandInitializerTest, CommandsMapContentTest)
     ASSERT_TRUE(dynamic_cast<AddUrlCommand *>(cmd) != nullptr);
 }
 
-TEST_F(CommandInitializerTest, CommandsMapContentTest)
+TEST_F(CommandInitializerTest, CommandsMapContentTest2)
 {
     auto &commands = initializer.getInitializedCommands();
     // Check if the "1" command is present in the commands map

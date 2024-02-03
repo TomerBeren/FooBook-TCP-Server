@@ -1,9 +1,4 @@
-#include "ConsoleMenu.hpp"
 #include "CommandInitializer.hpp"
-#include "App.hpp"
-#include <iostream>
-#include <string>
-#include "IMenu.hpp"
 
 int main()
 {

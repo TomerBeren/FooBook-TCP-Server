@@ -28,3 +28,12 @@ int BloomFilter::getBitArraySize()
 {
     return this->bitArray.size();
 }
+// Getter method for accessing the set of false positives recorded by the Bloom Filter.
+std::unordered_set<std::string> BloomFilter::getFalsePositives()
+{
+    return this->falsePositive;
+}
+// Method to add URL's to a list to cross check false positives within the Bloom Filter.
+void BloomFilter::insertFaslePositives(std::string& url){
+    this->falsePositive.insert(url);
+}

@@ -5,6 +5,7 @@
 #include <string>
 #include "ICommand.hpp"
 #include "CommandFactory.hpp"
+#include "App.hpp"
 #include "IMenu.hpp"
 #include "ConsoleMenu.hpp"
 

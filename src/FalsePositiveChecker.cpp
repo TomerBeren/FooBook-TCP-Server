@@ -1,5 +1,5 @@
 #include "FalsePositiveChecker.hpp"
-#include <iostream>
+
 // Evaluates if a URL is a false positive and reports the result.
 void FalsePositiveChecker::checkAndReport(const std::string &url, bool flag, BloomFilter &bloomFilter)
 {
