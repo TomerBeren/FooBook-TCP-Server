@@ -2,7 +2,7 @@
 FROM gcc:latest
 
 # Seting the working directory inside the Docker container
-WORKDIR /usr/src/advancedsysprogproject
+WORKDIR /usr/src/advanced_project
 
 # Installing any necessary dependencies
 RUN apt-get update && rm -rf /var/lib/apt/lists/*
