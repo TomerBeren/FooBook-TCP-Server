@@ -24,7 +24,7 @@ jobs:
       id: meta
       uses: docker/metadata-action@v3
       with:
-        images: chengoiz/advanced_project
+        images: tomerberen/advancedprogproject
         
     - name: Build and Push Docker image
       uses: docker/build-push-action@v3
