@@ -10,35 +10,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-
-    - name: Cache GoogleTest
-      uses: actions/cache@v2
-      with:
-        path: /usr/local/lib/gtest
-        key: ${{ runner.os }}-gtest
+    - uses: actions/checkout@v2
 
     - name: Install C++ environment
       run: |
         sudo apt update
         sudo apt install -y build-essential
         sudo apt install -y libgtest-dev
-        sudo apt install -y cmake
-        if [ ! -d "/usr/local/lib/gtest" ]; then
-          cd /usr/src/gtest
-          sudo cmake CMakeLists.txt
-          sudo make
-          sudo cp *.a /usr/local/lib
-        fi
-
+        sudo apt install -y cmake # Install cmake if you don't already have it
+        cd /usr/src/gtest
+        sudo cmake CMakeLists.txt
+        sudo make
+        
     - name: Build Project
       run: |
        cmake -B build -S .
-       
-    - name: Build with CMake
+    - name : Second Build
       run: |
         cmake --build build
-        
     - name: Run Tests
       run: |
         ctest --test-dir build --output-on-failure --verbose
