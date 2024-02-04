@@ -11,6 +11,7 @@ bool InputValidator::isInteger(const std::string &str)
     return (ss >> num) && (ss.eof());
 }
 
+
 // Validates if the tokens represent a valid command for initializing a BloomFilter.
 bool InputValidator::isValidBloomFilterCommand(const std::vector<std::string> &tokens)
 {
