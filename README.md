@@ -32,3 +32,9 @@ To run the project in a Docker container, execute:
 ```bash
 docker run -it advancedprogproject
 ```
+### Plan B
+If for any reason the docker build dosent work you can use our Makefile that we added for this case and run the command:
+
+```bash
+make
+```
