@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-This guide will walk you through the steps required to compile and run **[AAdvancedProgProject]** using Docker. Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+This guide will walk you through the steps required to compile and run **[AdvancedProgProject]** using Docker. Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
@@ -18,7 +18,7 @@ cd [Your Repository Name]
 ```
 ### Build the Docker Image
 
-Build the Docker image using the following command, replacing [image-name] with a name for your Docker image:
+Build the Docker image using the following command:
 
 ```bash
 docker build -t advancedprogproject .
