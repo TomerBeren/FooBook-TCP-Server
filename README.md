@@ -14,7 +14,7 @@ Clone the repository to your local machine:
 
 ```bash
 git clone [https://github.com/TomerBeren/AdvancedProgProject]
-cd [Your Repository Name]
+cd [the/path/to/your_project]
 ```
 ### Build the Docker Image
 
