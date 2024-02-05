@@ -37,4 +37,5 @@ If for any reason the docker build dosent work you can use our Makefile that we 
 
 ```bash
 make
+./my_program
 ```
