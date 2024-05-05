@@ -12,7 +12,7 @@ class FalsePositiveChecker
 public:
     // Checks if the given URL is considered a false positive by the BloomFilter
     // and reports the result.
-    void checkAndReport(const std::string &url, bool flag, BloomFilter &bloomFilter);
+    void checkAndReport(const std::string &url, bool flag, BloomFilter &bloomFilter,std::ostream &output);
 };
 
 #endif // FALSE_POSITIVE_CHECKER_HPP
