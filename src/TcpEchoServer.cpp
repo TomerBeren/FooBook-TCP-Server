@@ -2,7 +2,6 @@
 #include <netinet/in.h>
 #include <unistd.h>
 #include <string.h>
-#include <mutex>
 #include <iostream>
 #include <thread>
 #include "CommandInitializer.hpp"
@@ -10,15 +9,14 @@
 #include "FalsePositiveChecker.hpp"
 #include "ConsoleMenu.hpp"
 
+// Global command initializer and App instance
+static CommandInitializer initializer;
+static IMenu *menu = new ConsoleMenu();
+static App myApp(menu, initializer.commands);
+
 void handleClient(int client_sock) {
     char buffer[4096];
     int expected_data_len = sizeof(buffer);
-
-     // Initialize a unique CommandInitializer and App for each client
-    CommandInitializer client_initializer;
-    IMenu *client_menu = new ConsoleMenu();
-    App client_app(client_menu, client_initializer.commands);
-
    
     while (true) {
         memset(buffer, 0, sizeof(buffer));
@@ -35,7 +33,7 @@ void handleClient(int client_sock) {
         std::string input(buffer);
         std::stringstream output_stream;
 
-        client_app.run(input, output_stream);
+        myApp.run(input, output_stream);
 
         // Prepare the response to the client
         std::string response = output_stream.str();
@@ -50,7 +48,10 @@ void handleClient(int client_sock) {
 }
 
 int main() {
-
+    if(initializer.commands.empty()){
+        std::cout << "yes" << std::endl;
+    }
+    
     const int server_port = 5541;
     int sock = socket(AF_INET, SOCK_STREAM, 0);
     if (sock < 0) {
