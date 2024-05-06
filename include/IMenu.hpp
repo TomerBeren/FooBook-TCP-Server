@@ -12,7 +12,7 @@ class IMenu
 {
 public:
     // Pure virtual function that should be implemented to return the next command from the user as a vector of strings.
-    virtual std::vector<std::string> nextCommand() = 0;
+    virtual std::vector<std::string> nextCommand(const std::string &input) = 0;
 
     // Pure virtual function that should be implemented to provide access to the application's BloomFilter instance.
     virtual BloomFilter &getBloomFilter() = 0;

@@ -23,7 +23,7 @@ public:
     static std::map<std::string, ICommand *> &getInitializedCommands();
     
     // Initializes and starts the application using the provided CommandInitializer instance.
-    static void init(CommandInitializer &init);
+    //static void init(CommandInitializer &init);
 };
 
 #endif // COMMANDINITIALIZER_HPP

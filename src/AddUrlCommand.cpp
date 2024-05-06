@@ -1,7 +1,7 @@
 #include "AddUrlCommand.hpp"
 
 // Executes the command to add a URL to the BloomFilter
-void AddUrlCommand::execute(std::string &url, BloomFilter &bloomFilter) 
+void AddUrlCommand::execute(std::string &url, BloomFilter &bloomFilter,std::ostream &output) 
 {
     // Applies hash functions to the given URL and updates the BloomFilter accordingly
     AbstractCommand::applyHashFunctions(url, bloomFilter, [&](int index)
