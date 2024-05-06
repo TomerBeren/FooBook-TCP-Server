@@ -48,11 +48,8 @@ void handleClient(int client_sock) {
 }
 
 int main() {
-    if(initializer.commands.empty()){
-        std::cout << "yes" << std::endl;
-    }
-    
-    const int server_port = 5541;
+   
+    const int server_port = 5542;
     int sock = socket(AF_INET, SOCK_STREAM, 0);
     if (sock < 0) {
         perror("error creating socket");
