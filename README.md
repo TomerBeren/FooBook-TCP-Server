@@ -1,41 +1,17 @@
-# [AdvancedProgProject]
+# TCP Server Integration Branch
 
-## Getting Started
+This branch is dedicated to the integration of the TCP server with the Bloom filter functionality established in Part 1 of our project. The TCP server in this branch is configured to work seamlessly with our Node.js server and web client, providing enhanced URL filtering capabilities.
 
-This guide will walk you through the steps required to compile and run **[AdvancedProgProject]** using Docker. Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+## Overview
 
-### Prerequisites
+The TCP server utilizes a Bloom filter to efficiently check URLs for potential security threats. This integration is aimed at enhancing the security measures of our web application by preventing access to malicious URLs.
 
-Before you begin, ensure you have Docker installed on your system. If Docker is not installed, follow the installation instructions for your operating system on the [Docker Official Website](https://docs.docker.com/get-docker/).
+## Key Features
 
-### Installation
+- **Bloom Filter Integration**: Incorporates the Bloom filter from Part 1 to check URLs.
+- **TCP Server**: Facilitates communication between the Node.js server and the web client, ensuring that URL checks are performed swiftly and accurately.
+- **Security Enhancement**: Improves the overall security of the web platform by filtering out potentially harmful URLs before they reach the user.
 
-Clone the repository to your local machine:
+## Setup and Configuration
 
-```bash
-git clone [https://github.com/TomerBeren/AdvancedProgProject]
-cd [the/path/to/your_project]
-```
-### Build the Docker Image
-
-Build the Docker image using the following command:
-
-```bash
-docker build -t advancedprogproject .
-```
-This command reads the Dockerfile in the current directory and builds an image named advancedprogproject.
-
-### Run the Docker Container
-
-To run the project in a Docker container, execute:
-
-```bash
-docker run -it advancedprogproject
-```
-### Plan B
-If for any reason the docker build dosent work you can use our Makefile that we added for this case and run the command:
-
-```bash
-make
-./my_program
-```
+For complete setup and configuration instructions, please refer to the [project Wiki](https://github.com/TomerBeren/FooBook_Server/tree/tcp-server-main/wiki).
