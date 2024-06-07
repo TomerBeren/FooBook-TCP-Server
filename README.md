@@ -14,4 +14,4 @@ The TCP server utilizes a Bloom filter to efficiently check URLs for potential s
 
 ## Setup and Configuration
 
-For complete setup and configuration instructions, please refer to the [project Wiki](https://github.com/TomerBeren/FooBook_Server/tree/tcp-server-main/wiki).
+For complete setup and configuration instructions, please refer to the [project Wiki](https://github.com/TomerBeren/FooBook-Server-Public/tree/tcp-server-main/wiki).
