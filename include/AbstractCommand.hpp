@@ -33,7 +33,7 @@ protected:
 
 public:
     // Abstract method that concrete commands must implement to execute their specific action.
-    virtual void execute(std::string &url, BloomFilter &bloomFilter) = 0;
+    virtual void execute(std::string &url, BloomFilter &bloomFilter, std::ostream &output) = 0;
     // Virtual destructor to ensure derived class destructors are called correctly.
     virtual ~AbstractCommand() {}
 };

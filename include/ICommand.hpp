@@ -10,7 +10,7 @@ class ICommand
 {
 public:
     // Pure virtual function that specifies the interface for executing a command.
-    virtual void execute(std::string &url, BloomFilter &bloomFilter) = 0;
+    virtual void execute(std::string &url, BloomFilter &bloomFilter,std::ostream &output) = 0;
 
     // Virtual destructor to allow for proper cleanup of derived class objects through base class pointers.
     virtual ~ICommand() {}

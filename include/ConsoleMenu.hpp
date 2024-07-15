@@ -10,7 +10,7 @@ public:
     ConsoleMenu() = default; // Default constructor.
 
     // Captures and returns the next command from user input as a vector of strings.
-    std::vector<std::string> nextCommand();
+    std::vector<std::string> nextCommand(const std::string &input);
 
     // Provides access to the internal BloomFilter instance for operations like checking or adding URLs.
     BloomFilter &getBloomFilter();

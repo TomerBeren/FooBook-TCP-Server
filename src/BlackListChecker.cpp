@@ -1,7 +1,7 @@
 #include "BlackListChecker.hpp"
 
 // Executes the blacklist check command
-void BlackListChecker::execute(std::string &url, BloomFilter &bloomFilter) 
+void BlackListChecker::execute(std::string &url, BloomFilter &bloomFilter,std::ostream &output) 
 {
     // Initially assume URL is blacklisted (all bits found in BloomFilter)
     bool flag = true;
@@ -15,7 +15,7 @@ void BlackListChecker::execute(std::string &url, BloomFilter &bloomFilter)
     });
      // Check if the output was a flase positive.
     FalsePositiveChecker checker;
-    checker.checkAndReport(url, flag, bloomFilter);
+    checker.checkAndReport(url, flag, bloomFilter, output);
 }
 // Returns a unique identifier for the BlackListChecker command
 std::string BlackListChecker::getId()

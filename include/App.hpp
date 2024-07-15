@@ -17,7 +17,7 @@ public:
     // Constructor for the App class, taking a menu system and a map of commands as parameters.
     App(IMenu *menu, std::map<std::string, ICommand *> commands);
     // Runs the main loop of the application, processing user commands through the menu system.
-    void run();
+    void run(const std::string &input, std::ostream &output);
 };
 
 #endif // APP_HPP

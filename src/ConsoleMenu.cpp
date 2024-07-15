@@ -1,11 +1,9 @@
 #include "ConsoleMenu.hpp"
 
 // waits for user input from the console, processes it, and returns a vector of strings.
-std::vector<std::string> ConsoleMenu::nextCommand()
+std::vector<std::string> ConsoleMenu::nextCommand(const std::string &input)
 {
-    std::string input;
-    std::getline(std::cin, input); // Read the entire line from console.
-
+   
     // Check if the command is to initialize the BloomFilter if it hasn't been initialized yet.
     std::vector<std::string> tokens = InputValidator::removeDuplicatesAndInitVector(input);
 

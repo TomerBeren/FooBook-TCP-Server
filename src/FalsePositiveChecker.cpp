@@ -1,7 +1,7 @@
 #include "FalsePositiveChecker.hpp"
 
 // Evaluates if a URL is a false positive and reports the result.
-void FalsePositiveChecker::checkAndReport(const std::string &url, bool flag, BloomFilter &bloomFilter)
+void FalsePositiveChecker::checkAndReport(const std::string &url, bool flag, BloomFilter &bloomFilter, std::ostream &output)
 {
      // Retrieve the set of false positives from the BloomFilter.
     std::unordered_set<std::string> falsePositives = bloomFilter.getFalsePositives();
@@ -9,21 +9,21 @@ void FalsePositiveChecker::checkAndReport(const std::string &url, bool flag, Blo
     if (flag)
     {
         // Initially, print the flag status (true).
-        std::cout << std::boolalpha << flag;
+        output << std::boolalpha << flag;
         // If the URL is actully black listed in out control set print (true) again.
         if (falsePositives.find(url) != falsePositives.end())
         {
-            std::cout << " " << std::boolalpha << flag << std::endl;
+            output << " " << std::boolalpha << flag << std::endl;
         }
         // URL is a false positive print (false).
         else
         {
-            std::cout << " " << std::boolalpha << !flag << std::endl;
+            output << " " << std::boolalpha << !flag << std::endl;
         }
     }
     //URL is definitly not blacklisted print (false)
     else
     {
-        std::cout << std::boolalpha << flag << std::endl;
+        output << std::boolalpha << flag << std::endl;
     }
 }
