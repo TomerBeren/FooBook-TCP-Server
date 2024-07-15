@@ -1,8 +1,19 @@
-# Advanced Programming Project: Bloom Filter Component
+# TCP Server and Bloom Filter Integration
+
+## Table of Contents
+- [Introduction](#introduction)
+- [Getting Started](#getting-started)
+- [Enhanced URL Security Features](#enhanced-url-security-features)
+- [Prerequisites](#prerequisites)
+- [Overview of Integration](#overview-of-integration)
+- [Key Features](#key-features)
+- [Setup and Configuration](#setup-and-configuration)
+
+## Introduction
+This repository includes the integration of a TCP server with a Bloom filter, aimed at enhancing the security of a web application by efficiently checking URLs for potential threats. This guide will walk you through the steps required to compile and run the Bloom Filter component and the TCP Server using Docker, ensuring seamless operation with our Node.js server and web client.
 
 ## Getting Started
-
-This guide will walk you through the steps required to compile and run the Bloom Filter component of the Advanced Programming Project using Docker. Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
@@ -39,5 +50,17 @@ If the Docker build fails, you can use the provided Makefile as an alternative m
 make
 ./my_program
 ```
+
+## Overview of Integration
+The TCP server is designed to utilize a Bloom filter to efficiently check URLs for potential security threats. This setup is aimed at improving the security measures of our web application.
+
+## Key Features
+- **Bloom Filter Integration**: Incorporates the Bloom filter to check URLs.
+- **TCP Server**:  Facilitates communication between the Node.js server and the web client, ensuring that URL checks are performed swiftly and accurately.
+- **Security Enhancement**:  Improves the overall security of the web platform by filtering out potentially harmful URLs before they reach the user.
+
+## Setup and Configuration
+For complete setup and configuration instructions, please refer to the project [Wiki](https://github.com/TomerBeren/FooBook-Server-Public/tree/tcp-server-main/wiki).
+
 By following these steps, you should be able to compile and run the Bloom Filter component of the Advanced Programming Project successfully. If you encounter any issues, please refer to the repository's documentation or reach out for support.
 
