@@ -62,5 +62,5 @@ The TCP server is designed to utilize a Bloom filter to efficiently check URLs f
 ## Setup and Configuration
 For complete setup and configuration instructions, please refer to the project [Wiki](https://github.com/TomerBeren/FooBook-Server-Public/tree/tcp-server-main/wiki).
 
-By following these steps, you should be able to compile and run the Bloom Filter component of the Advanced Programming Project successfully. If you encounter any issues, please refer to the repository's documentation or reach out for support.
+By following these steps, you should be able to compile and run both the Bloom Filter component and the TCP Server integration successfully. If you encounter any issues, please refer to the repository's documentation or reach out for support.
 
