@@ -27,22 +27,21 @@ Clone the repository to your local machine:
 git clone https://github.com/TomerBeren/FooBook-TCP-Server-Public
 cd FooBook-TCP-Server-Public
 ```
-### Build the Docker Image
+### Launching the Dockerized TCP Server
 
-Build the Docker image using the following command:
+To deploy the TCP server using Docker, follow these steps:
 
-```bash
-docker build -t advancedprogproject .
-```
-This command reads the Dockerfile in the current directory and builds an image named advancedprogproject.
+1. **Pull the Docker Image** Ensure Docker is installed on your system. You can download it from [Docker Hub](https://hub.docker.com/). Then, pull the Docker image using the following command:
+   ```bash
+   docker pull tomerberen/advancedsysprogproject:v1.0.3
+   ```
 
-### Run the Docker Container
-
-To run the project in a Docker container, execute:
-
-```bash
-docker run -it advancedprogproject
-```
+2. **Run the Docker Container** Run the Docker container, ensuring that the TCP server is properly mapped to the correct ports on your local machine:
+    ```bash
+    docker run -i -t -p 5542:5542 tomerberen/advancedsysprogproject:v1.0.3
+    ```
+    This command starts the TCP server and binds it to port 5542 on your localhost, allowing the Node.js server to communicate with it.
+   
 ### Alternative Method
 If the Docker build fails, you can use the provided Makefile as an alternative method:
 
